@@ -1,0 +1,14 @@
+<nav *ngIf="showNavbar()">
+  <div class="navbar">
+    <div class="logo">
+      <h2>AI Complaint Companion</h2>
+    </div>
+    <div class="nav-links">
+      <a routerLink="/home" routerLinkActive="active">Home</a>
+      <a routerLink="/complaints" routerLinkActive="active">Complaints</a>
+      <a routerLink="/profile" routerLinkActive="active">Profile</a>      
+      <button (click)="logout()">Logout</button>
+    </div>
+</div>
+
+</nav>

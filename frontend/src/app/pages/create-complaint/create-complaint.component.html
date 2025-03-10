@@ -1,0 +1,61 @@
+<div class="flex items-center justify-center min-h-[80vh] create-container">
+  <div class="bgColor p-8 rounded-2xl shadow-lg w-full max-w-lg">
+    <h2 class="text-2xl font-bold mb-6 text-center">Create Complaint</h2>
+    <form [formGroup]="complaintForm" (ngSubmit)="onSubmit()" >
+      <div class="mb-4">
+        <label class="block mb-1 font-medium">Title</label>
+        <input type="text" formControlName="title" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400" placeholder="Enter your complaint">
+      </div>
+      <div class="mb-4">
+        <label class="block mb-1 font-medium">Description</label>
+        <textarea formControlName="description" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400" placeholder="Describe your complaint"></textarea>
+      </div>
+      <!-- <div class="mb-4">
+        <input type="checkbox" formControlName="useChatbot" class="form-checkbox text-blue-500 mr-2">
+        <label for="chatbotSuggestion" class="font-medium">Chatbot Suggestion</label>
+      </div> -->
+      <button type="submit"  [disabled]="isLoading" class="w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 cursor-pointer" >
+        <span *ngIf="!isLoading && !success">Submit</span>
+        <div *ngIf="isLoading" class="loader"></div>
+        <span *ngIf="success" class="text-green-500 text-xl">✅</span>
+      </button>
+      <br><br>
+      <span class="ml-48"> ---- Or ----</span>
+      <br><br>  
+      <button class="w-full bg-violet-500 text-white py-2 rounded-lg hover:bg-violet-600" (click)="openSuggestionDialog()" type="button">
+        Get AI Suggestion 🤖
+      </button>
+    </form>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+<!-- <div class="create-complaint-container">
+  <h2>Create Complaint</h2>
+  
+  <form [formGroup]="complaintForm" (ngSubmit)="onSubmit()">
+    <mat-form-field>
+      <mat-label>Title</mat-label>
+      <input matInput placeholder="Enter complaint title" formControlName="title" />
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Description</mat-label>
+      <textarea matInput placeholder="Describe your issue" formControlName="description"></textarea>
+    </mat-form-field>
+
+    <button mat-raised-button color="primary" type="submit">Submit</button>
+  </form>
+
+  <div class="chatbot">
+    <mat-icon class="chatbot-icon" (click)="openChatbot()">chat</mat-icon>
+    <span>Chatbot</span>
+  </div>
+</div> -->

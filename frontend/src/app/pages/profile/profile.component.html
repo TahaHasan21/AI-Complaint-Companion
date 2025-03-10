@@ -1,0 +1,42 @@
+<div class="profile-container min-h-screen flex items-center justify-center">
+  <div class="bgColor rounded-3xl shadow-xl p-10 w-[450px] text-center">
+    <div class="relative w-32 h-32 mx-auto">
+      <img [src]="profileImage || 'https://api.dicebear.com/6.x/bottts/svg?seed=MuthuAI'" 
+           alt="avatar" 
+           class="w-32 h-32 rounded-full mx-auto shadow-lg border-4 border-blue-500 cursor-pointer">
+      
+      <label for="fileUpload" class="absolute bottom-0 right-2 bg-blue-500 text-white text-xs px-2 py-1 rounded-full shadow-lg cursor-pointer hover:bg-blue-600">
+        📸 Upload
+      </label>
+    
+      <input type="file" id="fileUpload" (change)="onFileSelected($event)" class="hidden">
+    </div>
+    <h2 class="text-3xl font-bold mt-4 bg-gradient-to-r from-blue-500 to-purple-500 text-transparent bg-clip-text">{{ username }}</h2>
+    <p class="text-gray-600">{{ email }}</p>
+
+    <div class="mt-6">
+      <span class="text-xl font-semibold">Total Complaints:</span>
+      <div class="relative pt-1">
+        <div class="overflow-hidden h-3 mb-4 text-xs flex rounded bg-blue-200">
+          <div style="width: 85%" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-blue-500"></div>
+        </div>
+      </div>
+      <p class="text-sm text-gray-600">10 Complaints</p>
+    </div>
+
+    <div class="mt-6">
+      <h3 class="text-xl font-bold">Latest Complaint</h3>
+      <p class="text-sm text-gray-600">"Internet not working from 2 days"</p>
+      <span class="bg-red-500 text-white text-xs px-2 py-1 rounded-full">🔥 High Priority</span>
+    </div>
+
+    <div class="mt-8 flex justify-between">
+      <button class="bg-yellow-500 px-4 py-2 rounded-lg text-white cursor-pointer shadow-md">Edit Profile</button>
+      <button (click)="logout()" class="bg-blue-600 px-4 py-2 rounded-lg cursor-pointer text-white shadow-md">Logout</button>
+    </div>
+<!-- 
+    <div class="mt-8">
+      <span class="bg-green-500 text-white px-4 py-1 rounded-full shadow-md text-sm">✅ AI Powered User</span>
+    </div> -->
+  </div>
+</div>

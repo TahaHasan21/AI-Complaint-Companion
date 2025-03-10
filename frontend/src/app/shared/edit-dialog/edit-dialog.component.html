@@ -1,0 +1,27 @@
+<div class="bg-white p-6 rounded-2xl shadow-lg shadow-gray-400/20">
+    <h2 class="text-lg font-semibold text-center mb-4" >Edit Complaint</h2>
+    <div>
+      <label class="block mb-2 text-sm font-medium">Title:</label>
+      <input type="text" [(ngModel)]="complaint.title" class="w-full p-2 border rounded-lg outline-none focus:ring-2 focus:ring-purple-500" />
+    </div>
+    <div>
+      <label class="block mb-2 text-sm font-medium mt-4">Description:</label>
+      <textarea [(ngModel)]="complaint.description" class="w-full p-2 border rounded-lg outline-none focus:ring-2 focus:ring-purple-500"></textarea>
+    </div>
+  
+    <div class="flex justify-end gap-4 mt-6">
+        <button (click)="saveComplaint()" 
+                class="bg-purple-600 text-white px-5 py-2 text-center cursor-pointer rounded-lg hover:bg-purple-700 flex items-center gap-2" 
+                [disabled]="loading">
+          {{ loading ? 'Saving...' : 'Save' }}
+          <div *ngIf="loading" class="loader w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
+        </button>
+        
+        <button (click)="closeDialog()" 
+                class="bg-gray-300 text-gray-700 px-4 py-2 text-center cursor-pointer rounded-lg hover:bg-gray-400">
+          Close
+        </button>
+      </div>
+      
+  </div>
+  

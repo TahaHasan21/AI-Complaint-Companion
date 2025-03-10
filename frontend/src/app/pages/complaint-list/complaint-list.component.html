@@ -1,0 +1,73 @@
+<div class="complaints-conainer" >
+    <h2 class="text-3xl font-semibold mb-4"></h2>
+    <button class="create-complaint-btn" (click)="navigateToCreateComplaint()">
+      ➕ Create Complaint
+    </button>    
+
+
+  <!-- 🔥 LOADER -->
+  <div *ngIf="isLoading" class="loader">
+    <div class="spinner"></div>
+  </div>
+
+  <!-- Complaint List -->
+  <div class="complaint-list grid grid-cols-3 gap-4">
+    <div *ngFor="let complaint of complaints" class="complaint-card">
+      <div class="card-header">
+        <h3>{{ complaint.title }}</h3>
+        <span class="badge" [ngClass]="getPriorityClass(complaint.priority)">
+          {{ complaint.priority }}
+        </span>
+      </div>
+
+      <p>{{ complaint.description }}</p>
+
+      <div class="status-dropdown">
+        <select [(ngModel)]="complaint.status" (change)="updateStatus(complaint.id, complaint.status)">
+          <option value="OPEN">Open</option>
+          <option value="IN_PROGRESS">In Progress</option>
+          <option value="CLOSED">Closed</option>
+        </select>
+      </div>
+      
+
+      <div class="card-actions flex gap-2 mt-4">
+        <button (click)="editComplaint(complaint)" class="bg-yellow-500 text-white px-4 py-2 rounded hover:bg-yellow-600 transition cursor-pointer">
+          Edit 
+        </button>
+
+        <button (click)="deleteComplaint(complaint.id)" class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600 transition cursor-pointer">
+          Delete
+        </button>
+
+        <!-- 🔥 Detailed View Button -->
+        <button (click)="viewComplaint(complaint)" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition cursor-pointer">
+          View 
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Complaint Detailed View Modal POPUP -->
+<!-- Complaint Popup Modal -->
+<div class="modal" *ngIf="selectedComplaint">
+  <div class="modal-content">
+    <h3>{{ selectedComplaint.title }}</h3>
+    <p>{{ selectedComplaint.description }}</p>
+    <p>Priority: <span [ngClass]="getPriorityClass(selectedComplaint.priority)">{{ selectedComplaint.priority }}</span></p>
+    <p>Status: {{ selectedComplaint.status }}</p>
+
+
+    <button class="suggestion-btn" (click)="openSuggestionDialog()" >
+      Get AI Suggestion 🤖
+    </button>
+
+    <!-- <div *ngIf="isFetching" class="spinner"></div> -->
+
+    <button (click)="closeModal()" class="close-btn">
+      Close
+    </button>
+  </div>
+</div>
+
+</div>

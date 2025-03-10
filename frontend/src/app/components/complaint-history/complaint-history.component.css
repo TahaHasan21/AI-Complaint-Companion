@@ -1,0 +1,30 @@
+.history-card {
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .status {
+    padding: 4px 12px;
+    border-radius: 20px;
+    text-align: center;
+  }
+  
+  .open {
+    background: #ffcc00;
+    color: #333;
+  }
+  
+  .in-progress {
+    background: #0099ff;
+    color: #fff;
+  }
+  
+  .closed {
+    background: #28a745;
+    color: #fff;
+  }
+  

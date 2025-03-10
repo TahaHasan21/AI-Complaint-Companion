@@ -1,0 +1,90 @@
+@keyframes glow {
+    0% {
+      opacity: 0.3;
+      transform: scaleX(0.9);
+    }
+    50% {
+      opacity: 1;
+      transform: scaleX(1);
+    }
+    100% {
+      opacity: 0.3;
+      transform: scaleX(0.9);
+    }
+  }
+  
+  .animate-glow {
+    animation: glow 3s infinite ease-in-out;
+  }
+  
+  .animate-fadeIn {
+    animation: fadeIn 1.2s ease-out;
+  }
+  
+  h1 {
+    font-size: 1.8rem; /* Adjust the size if needed */
+    text-align: center;
+    white-space: nowrap; /* Prevent text from breaking into two lines */
+    overflow: hidden; /* Optional: Hide overflow if text is too long */
+    text-overflow: ellipsis; /* Optional: Add ... if text is too long */
+  }
+
+  .glass {
+    background: rgba(0, 0, 0, 0.2); /* Darker glass effect */
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  
+  h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  }
+  
+  h2 span {
+    color: orange;
+  }
+  
+  input {
+    background: rgba(255, 255, 255, 0.2); /* More visible inputs */
+    color: rgb(66, 60, 60);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+  }
+  
+  input::placeholder {
+    color: rgba(255, 255, 255, 1);
+  }
+  
+  button {
+    background: linear-gradient(to right, #4b6cb7, #182848);
+  }
+  
+  button:hover {
+    transform: scale(1.05);
+  }
+  
+  button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }  
+  
+
+  :host {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    height: 100vh; /* Full height only for login */
+    width: 100%; 
+  }
+  
+  .login-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* This will only affect the login page */
+    width: 100%;
+  }
+  

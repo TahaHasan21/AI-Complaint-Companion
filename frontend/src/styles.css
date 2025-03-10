@@ -1,0 +1,51 @@
+@import "tailwindcss";
+  
+
+  .custom-dialog .mat-dialog-container {
+    background: #f7f9fc;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+body { font-family: Roboto, "Helvetica Neue", sans-serif; }
+  body {
+    background: linear-gradient(to right, #e0f7fa, #80deea);
+    color: #333;
+    font-family: "Poppins", sans-serif;
+    transition: background 0.3s ease-in-out;
+  }
+
+/* Custom Snackbar Styles */
+
+.snackbar-success {
+  background: linear-gradient(45deg, #00b894, #00cec9);
+  color: white;
+  font-weight: bold;
+  padding: 12px;
+  text-align: center;
+  border-radius: 10px;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.snackbar-error {
+  background: linear-gradient(45deg, #d63031, #e84393);
+  color: white;
+  font-weight: bold;
+  padding: 12px;
+  text-align: center;
+  border-radius: 10px;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.snackbar-info {
+  background: linear-gradient(45deg, #0984e3, #6c5ce7);
+  color: white;
+  font-weight: bold;
+  padding: 12px;
+  text-align: center;
+  border-radius: 10px;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}

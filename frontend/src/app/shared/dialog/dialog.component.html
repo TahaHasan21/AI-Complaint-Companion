@@ -1,0 +1,15 @@
+<h2 mat-dialog-title class="dialog-header">AI Suggestions</h2>
+
+<div mat-dialog-content class="suggestion-content">
+  <div *ngIf="loading" class="loader">
+    <div class="spinner"></div>
+  </div>
+
+  <div *ngIf="!loading">
+    <div [innerHTML]="getFormattedSuggestion()"></div>
+  </div>
+</div>
+
+<div mat-dialog-actions align="end" class="dialog-footer">
+  <button mat-button class="close-btn" (click)="onClose()">Close</button>
+</div>

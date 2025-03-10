@@ -1,0 +1,209 @@
+.complaints-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); 
+  gap: 20px;
+}
+
+.complaint-list {
+  padding-top: 90px;
+}
+
+.complaint-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: linear-gradient(to right, #f0f4ff, #e6ecff);
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.complaint-card:hover {
+  transform: translateY(-5px);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.badge {
+  padding: 6px 12px;
+  border-radius: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.high {
+  background: #ff4d4d; /* Red */
+  color: white;
+}
+
+.medium {
+  background: #ffad33; /* Orange */
+  color: white;
+}
+
+.low {
+  background: #2ecc71; /* Green */
+  color: white;
+}
+
+.status-dropdown {
+  margin-top: 10px;
+}
+
+.status-dropdown select {
+  width: 100%;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background: white;
+  cursor: pointer;
+}
+
+.card-actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+button {
+  padding: 10px 14px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+.bg-yellow-500 {
+  background: #f4b400; /* Google Yellow */
+  color: white;
+}
+
+.bg-red-500 {
+  background: #ea4335; /* Google Red */
+  color: white;
+}
+
+.bg-blue-500 {
+  background: #4285f4; /* Google Blue */
+  color: white;
+}
+
+/* Loader */
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  margin-bottom: 20px;
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  border-top: 4px solid #4285f4;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Modal Styling */
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+}
+
+.modal-content {
+  padding: 2rem;
+  background: white;
+  border-radius: 20px;
+  animation: slideIn 0.3s ease;
+  text-align: left;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.close-btn {
+  padding: 10px;
+  background: #ff4444;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.suggestion-btn {
+  padding: 10px;
+  background: #6c63ff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 10px;
+  margin-right: 5px ;
+}
+
+.create-complaint-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #34a853;
+  color: white;
+  padding: 12px 16px;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  /* transition: all 0.3s ease-in-out; */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease;
+  z-index: 1000; /* Make sure it stays on top */
+}
+
+.create-complaint-btn:hover {
+  background: #2e8b57;
+  transform: scale(1.1); 
+}
+
+h2 {
+  font-weight: bold;
+}

@@ -1,0 +1,9 @@
+<div class="chatbot" (click)="toggleChat()">
+    💬 Chatbot
+  </div>
+  
+  <div class="chat-window" *ngIf="showChat">
+    <textarea [(ngModel)]="message" placeholder="Describe your issue..."></textarea>
+    <button (click)="askChatbot()">Send</button>
+  </div>
+  

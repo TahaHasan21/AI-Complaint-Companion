@@ -1,0 +1,70 @@
+.navbar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.2rem 3rem;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(15px);
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+    position: fixed; /* Fix Navbar at Top */
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    height: 80px; /* Explicit height */
+}
+
+/* Push the content down */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.main-content {  
+    padding-top: 100px; /* Adjust based on navbar height */
+}
+
+
+.navbar h2 {
+  font-size: 1.8rem; /* App Title Size */
+  font-weight: bold;
+  color: #333;
+}
+
+.nav-links {
+  display: flex;
+  gap: 3rem; /* Equal Space between Links */
+  list-style: none; /* Remove Bullet Points */
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+.nav-links a:hover {
+  text-shadow: 0px 0px 10px #6a11cb;
+  cursor: pointer;
+}
+
+.nav-links a.active {
+  text-shadow: 0px 0px 15px #6a11cb;
+  border-bottom: 2px solid #6a11cb;
+}
+
+button {
+  padding: 0 15px;
+  border: none;
+  cursor: pointer;
+  border-radius: 20px;
+  background: linear-gradient(45deg, #6a11cb, #2575fc);
+  color: white;
+  transition: 0.3s ease;
+}
+
+button:hover {
+  transform: scale(1.1);
+  background: linear-gradient(45deg, #2575fc, #6a11cb);
+}
