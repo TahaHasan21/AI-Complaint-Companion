@@ -38,7 +38,7 @@ Follow these steps to run the **backend** and **frontend**.
 # 1️⃣ Navigate to the backend folder
 cd Backend
 
-# 2️⃣ Set up Postgres DB, jwt secret key and your own API from Cohere API in application.properties
+# 2️⃣ Set up Postgres DB, jwt secret key and your own API Key from Cohere API in application.properties
 
 # spring.datasource.url=jdbc:postgresql://localhost:5432/complaint_db
 # spring.datasource.username=postgres
