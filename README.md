@@ -1,4 +1,4 @@
-# 🚀 AI Complaint Companion  
+#  AI Complaint Companion  
 
 **AI Complaint Companion** is an AI-powered complaint management system that allows users to log complaints, receive AI-based suggestions, and track their complaint status efficiently with AI-powered complaint prioritization.  
 
